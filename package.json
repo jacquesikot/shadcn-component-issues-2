@@ -1,0 +1,35 @@
+{
+  "name": "shadcn-issue-analyzer",
+  "version": "1.0.0",
+  "description": "Analyze shadcn component issues and identify critical ones using GitHub API and OpenAI",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "analyze": "npm run build && node dist/index.js analyze",
+    "setup": "node setup.js",
+    "example": "ts-node example.ts",
+    "list": "npm run build && node dist/index.js list-components"
+  },
+  "keywords": [
+    "shadcn",
+    "github",
+    "openai",
+    "analysis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "openai": "^4.28.0",
+    "dotenv": "^16.4.1",
+    "commander": "^12.0.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}
